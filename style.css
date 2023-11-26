@@ -4,7 +4,7 @@ body {
 
 @font-face {
     font-family: 'Norse-Bold';
-    src: url("./Norse-Bold.otf") format('opentype');
+    src: url("./fonts/Norse-Bold.otf") format('opentype');
 }
 
 .contents {
@@ -36,13 +36,13 @@ body {
   }
 
 .card-body .odin-title {
-    height: 16vh;
+    height: 12vh;
     width: 6vw;
 }
 
-p {
+p.odin-title {
     font-family: 'Norse-Bold';
-    margin-bottom: 3rem;
+    margin-bottom: 80px;
 }
 
 .sidebar .background {
@@ -61,20 +61,30 @@ p {
     flex-direction: column;
 }
 
-.account {
-    background-color: #f9fafa;
-    flex: 111;
-}
 
-.hero {
-    background-color: #f9fafa;
+.main .hero {
+    background-color: #f9fafa;    
+    display: flex;
+    flex-direction: column;
     flex: 311;
+    justify-content: center;
+    align-items: center;
 }
 
-.form-field {
+.main .form-field {
     z-index: 2;
     background-color: white;
     flex: 211;
     box-shadow: 0px 2px 5px lightgrey;
 }
 
+.main .account {
+    background-color: #f9fafa;
+    flex: 111;
+}
+
+.hero p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    width: 35vw;
+}
