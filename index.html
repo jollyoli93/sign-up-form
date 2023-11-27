@@ -56,20 +56,26 @@
 
                         <div class="phone">
                             <label for="user_phone">Phone Number</label>
-                            <input type="tel" id="user_phone" name="phone" placeholder="07499387267" required>
+                            <input type="tel" id="user_phone" name="phone" placeholder="07499387267" minlength="11" maxlength="11" required>
                         </div>
                     </form-field>
 
                     <form-field class="password">
                         <div class="password">
                             <label for="user_password">Password</label>
-                            <input type="password" id="user_password" name="password" placeholder="********" required>
+                            <input type="password" id="user_password" name="password" placeholder="********" 
+                                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required
+                                   oninput="check()">
+                            <p class="validity"></p>
                         </div>
 
                         <div class="confirm_password">
                             <label for="confirm_password">Confirm Password</label>
-                            <input type="password" id="confirm_password" name="password" placeholder="********" required>
+                            <input type="password" id="confirm_password" name="password" placeholder="********" 
+                                   pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required
+                                   oninput="check()">
                         </div>
+                        
                     </form-field>
                 </form>
             </div>
