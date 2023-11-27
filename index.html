@@ -29,8 +29,56 @@
                     You <i>know</i> you want to.
                 </p>
             </div>
-            <div class="form-field"></div>
-            <div class="account"></div>
+
+            <div class="form-field">
+                <form id="user_form" action="./account_form.html" method="post">
+
+                <h2>Let's do this!</h2>
+                
+                    <form-field class="name">
+
+                        <div class="first_name">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="Thor" required>
+                        </div>
+
+                        <div class="last_name">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Odinson" required>
+                        </div>
+                    </form-field>
+
+                    <form-field class="contact-details">
+                        <div class="email">
+                            <label for="user_email">Email Address</label>
+                            <input type="email" id="user_email" name="email" placeholder="thorO@yahoogle.de" required>
+                        </div>
+
+                        <div class="phone">
+                            <label for="user_phone">Phone Number</label>
+                            <input type="tel" id="user_phone" name="phone" placeholder="07499387267" required>
+                        </div>
+                    </form-field>
+
+                    <form-field class="password">
+                        <div class="password">
+                            <label for="user_password">Password</label>
+                            <input type="password" id="user_password" name="password" placeholder="********" required>
+                        </div>
+
+                        <div class="confirm_password">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" id="confirm_password" name="password" placeholder="********" required>
+                        </div>
+                    </form-field>
+                </form>
+            </div>
+
+            <div class="account">
+                <button type="submit" form="user_form" value="create_account">Create Account</button>
+            
+                <p>Already have an account? <a href="./account_form.html">Log in</a> </p>
+            </div>
         </div>
     </div>
     

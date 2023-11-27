@@ -1,4 +1,9 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
+    display: flex;
+    justify-content: center;
     background-color: black;
 }
 
@@ -8,6 +13,7 @@ body {
 }
 
 .contents {
+    width: 80vw;
     display: flex;
     align-items: center;
 }
@@ -21,13 +27,12 @@ body {
 
 .card-body {
     position: absolute;
-    height: 20vh;
-    width: 33vw;
+    height: 16vh;
+    width: 27.2vw;
     background: black;
     opacity: 0.6;
     color: white;
-    top: 30vh;
-    text-align: center;
+    top: 34vh;
     font-size: 6rem;
     display: flex;
     justify-content: center;
@@ -54,37 +59,99 @@ p.odin-title {
 /* main card styling */
 
 .main {
+    font-family: Arial, Helvetica, sans-serif;
     border: solid 1px black;
     height: 100vh;
+    width: 64vw;
     display: flex;
     flex: auto;
     flex-direction: column;
 }
 
 
-.main .hero {
-    background-color: #f9fafa;    
-    display: flex;
-    flex-direction: column;
-    flex: 311;
-    justify-content: center;
-    align-items: center;
-}
+    .main .hero {
+        background-color: #f9fafa;    
+        display: flex;
+        flex-direction: column;
+        flex: 311;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
-.main .form-field {
-    z-index: 2;
-    background-color: white;
-    flex: 211;
-    box-shadow: 0px 2px 5px lightgrey;
-}
+    .main .form-field {
+        z-index: 2;
+        background-color: white;
+        flex: 211;
+        box-shadow: 0px 2px 5px lightgrey;
+        padding-left: 30px;
+        display: flex;
+    }
 
-.main .account {
-    background-color: #f9fafa;
-    flex: 111;
-}
+    .main .account {
+        background-color: #f9fafa;
+        padding-left: 50px;
+        flex: 111;
+    }
 
 .hero p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    width: 35vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 50px;
+    width: 40vw;
 }
+
+/* form styling */
+
+button,
+input {
+  font-family: inherit;
+  font-size: 1rem;
+  height: 2rem;  
+  width: 15vw;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+    form-field.name, form-field.contact-details, form-field.password {
+        display: flex;
+        flex-flow: wrap;
+        gap: 5vw;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    /* To enable text above form field */
+    .first_name, .last_name, .email, .phone, .password, .confirm_password {
+        display: flex;
+        flex-direction: column;
+    }
+
+/* create account section */
+
+.account {
+    padding-top: 30px;
+}
+
+    .account > button {
+        color: white;
+        font-size: 0.9rem;
+        font-family: inherit;
+        font-weight: bold;
+        background-color: #596D48;
+        height: 3rem;
+        width: 13vw;
+        border-radius: 8px;
+    
+    }
+
+    .account a {
+        color: #596D48;
+        font-weight: bold;
+        text-decoration: none;
+    }
