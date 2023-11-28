@@ -115,7 +115,13 @@ input {
 
 input:focus {
     background-color: white;
-    box-shadow: ;
+    border-color: rgb(17, 162, 246);
+    box-shadow: 2px 2px 2px 2px lightgray;
+    outline-color: #3575c2;
+}
+
+input:focus:invalid:required {
+    outline-color: red;
 }
 
 form {
@@ -166,5 +172,7 @@ form {
     }
 
     p.validity {
+        margin-top: 60px;
+        position: fixed;
         color: red;
     }
